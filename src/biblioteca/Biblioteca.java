@@ -19,5 +19,16 @@ public class Biblioteca {
         for (String libro : biblioteca) {
             System.out.println("- " + libro);
         }
+        
+        //buscar en la bibliotecha
+        String buscarLibro = "Sangre de Campeón";
+        if (biblioteca.contains(buscarLibro)){
+            System.out.println("El libro (" + buscarLibro + ") se encuentra disponible.");
+        }else{
+            System.out.println("El libro (" + buscarLibro + ") NO está disponible.");
+        }
+
+        //total libros
+        System.out.println("Total de libros en la biblioteca de Cris: " + biblioteca.size());
     }
 }
