@@ -16,11 +16,28 @@ public class TrabajadoresConSalario {
         trabajadores.put("Ana Valencia", 5100000.0);
 
         // Mostrar todas las tareas
-        System.out.println(" ***************** Mis trabajadores*****************");
+        System.out.println(" ***************** Mis trabajadores *****************");
         for (Map.Entry<String, Double> entrada : trabajadores.entrySet()) {
             System.out.println("- " + entrada.getKey() + " ($" + entrada.getValue() + ")");
         }
 
         //actualizar un trabajador
+        trabajadores.put("Cristian Ceballos",6500000.00);
+        System.out.println("El salario de Cristian Ceballos Fue actualizado correctamente");
+
+
+        // Mostrar los trabajadores actualizados
+        System.out.println(" ***************** Mis trabajadores Actualizados *****************");
+        for (Map.Entry<String, Double> entrada : trabajadores.entrySet()) {
+            System.out.println("- " + entrada.getKey() + " ($" + entrada.getValue() + ")");
+        }
+
+        // Calcular promedio
+        double total = 0;
+        for (double salario : trabajadores.values()) {
+            total += salario;
+        }
+        System.out.println("\nSalario promedio: $" + (total / trabajadores.size()));
     }
+
 }
